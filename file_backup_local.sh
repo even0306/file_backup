@@ -22,7 +22,6 @@ function dobackup() {
       chmod 777 ${BACKUP_PATH}/${NAME}
       rsync -az --append-verify --copy-unsafe-links ${temp}/ ${BACKUP_PATH}/${NAME}/${FILEPATH}/
       ln -s ${BACKUP_PATH}/${NAME}/${FILEPATH} ${BACKUP_PATH}/${NAME}/${NAME}"_latest"
-      exit 0
     fi
 
 
