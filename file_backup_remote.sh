@@ -2,7 +2,7 @@
 
 # hosts.txt 书写格式
 #
-# 192.168.1.123：app:db:end
+# 192.168.1.123:app:db:end
 #
 
 BACKUP_PATH="/media/backup/"
