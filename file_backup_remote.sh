@@ -4,12 +4,13 @@
 #
 # 192.168.1.123：app:db:end
 #
-# 以“:”分隔，第一位写源主机ip，后面接着rsync服务中配置的要备份的模块，最后以end结尾，一行一条
-DATAS=$(cat ${BACKUP_PATH}/hosts.txt)
 
 BACKUP_PATH="/media/backup/"
 
 PASSWD_FILE="/etc/rsyncd.passwd"
+
+# 以“:”分隔，第一位写源主机ip，后面接着rsync服务中配置的要备份的模块，最后以end结尾，一行一条
+DATAS=$(cat ${BACKUP_PATH}/hosts.txt)
 
 function dobackup() {
   for DATA in ${DATAS[@]}; do
