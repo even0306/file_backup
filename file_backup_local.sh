@@ -5,10 +5,11 @@
 # /app
 # /home/abc/aaa
 #
-# 写需要备份的文件或文件夹路径，一行一条，末尾不要带“/”
-DATAS=$(cat /app/scripts/hosts.txt)
 
 BACKUP_PATH="/media/backup/"
+
+# 写需要备份的文件或文件夹路径，一行一条，末尾不要带“/”
+DATAS=$(cat ${BACKUP_PATH}/hosts.txt)
 
 function dobackup() {
   for DATA in ${DATAS[@]}; do
